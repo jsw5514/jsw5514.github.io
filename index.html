@@ -4,249 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>개발자 전성욱 포트폴리오</title>
-  <style>
-    * { box-sizing: border-box; }
-
-    :root {
-      --bg: #071a2d;
-      --bg2: #0a223a;
-      --line: rgba(98, 171, 228, 0.08);
-      --cyan: #58cfff;
-      --cyan-soft: #6bd3ff;
-      --text: #eef4fb;
-      --muted: #8a97ab;
-      --panel: rgba(20, 45, 78, 0.55);
-      --panel-border: rgba(104, 214, 255, 0.2);
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background: #0b1320;
-      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      color: var(--text);
-    }
-
-    .phone {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      padding: 32px 24px 44px;
-      overflow: hidden;
-      background:
-        linear-gradient(var(--line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--line) 1px, transparent 1px),
-        radial-gradient(circle at top left, #0d2846 0%, var(--bg) 45%, #051422 100%);
-      background-size: 120px 120px, 120px 120px, cover;
-    }
-
-    .phone::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.01), rgba(255,255,255,0));
-      pointer-events: none;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 120px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo .dot {
-      color: var(--cyan);
-    }
-
-    .menu {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-    }
-
-    .menu span {
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: #ecf3fb;
-      border-radius: 999px;
-      margin: 2px 0;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 24px;
-      margin-bottom: 46px;
-      border: 1px solid var(--panel-border);
-      border-radius: 999px;
-      background: rgba(75, 161, 215, 0.18);
-      color: #7bd8ff;
-      font-size: 16px;
-      letter-spacing: 0.06em;
-      backdrop-filter: blur(8px);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
-      position: relative;
-      z-index: 1;
-    }
-
-    .badge::before {
-      content: "";
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #5fd0ff;
-      box-shadow: 0 0 12px rgba(95, 208, 255, 0.5);
-      flex: 0 0 auto;
-    }
-
-    .hero {
-      position: relative;
-      z-index: 1;
-    }
-
-    .title {
-      margin: 0;
-      font-size: 72px;
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-
-    .title .accent {
-      color: var(--cyan);
-      margin-left: 8px;
-    }
-
-    .subtitle {
-      margin: 34px 0 0;
-      font-size: 28px;
-      color: #b5c1d3;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-    }
-
-    .subtitle strong {
-      display: block;
-      margin-top: 8px;
-      font-size: 24px;
-      color: #eef5fc;
-      font-weight: 800;
-      line-height: 1.45;
-    }
-
-    .subtitle .muted-end {
-      color: #9aa7ba;
-      font-weight: 500;
-    }
-
-    .skills {
-      margin: 34px 0 54px;
-      color: #73829a;
-      font-size: 16px;
-      line-height: 1.8;
-      letter-spacing: 0.06em;
-      word-break: keep-all;
-    }
-
-    .actions {
-      display: grid;
-      gap: 24px;
-      margin-bottom: 64px;
-    }
-
-    .btn {
-      height: 94px;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      font-size: 24px;
-      font-weight: 800;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn.primary {
-      background: #66d2ff;
-      color: #08203a;
-      box-shadow: 0 12px 30px rgba(102, 210, 255, 0.18);
-    }
-
-    .btn.secondary {
-      color: #67d0ff;
-      background: rgba(6, 24, 44, 0.18);
-      border: 2px solid #50cfff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
-    }
-
-    .socials {
-      display: flex;
-      gap: 28px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .social {
-      width: 84px;
-      height: 84px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      background: rgba(34, 47, 79, 0.75);
-      border: 1px solid rgba(146, 171, 214, 0.12);
-      color: #dce7f7;
-      text-decoration: none;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
-    }
-
-    .social svg,
-    .btn svg {
-      width: 26px;
-      height: 26px;
-      fill: currentColor;
-    }
-
-    @media (max-width: 390px) {
-      .phone { padding-inline: 20px; }
-      .title { font-size: 62px; }
-      .subtitle { font-size: 24px; }
-      .subtitle strong { font-size: 21px; }
-      .btn { font-size: 22px; height: 88px; }
-    }
-  </style>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <main class="phone">
     <header class="header">
-      <div class="logo">JSW<span class="dot">.</span></div>
+      <div class="logobox"><div class="logo">JSW<span class="dot">.</span></div></div>
       <!-- <button class="menu" aria-label="메뉴 열기">
         <span></span>
         <span></span>
         <span></span>
       </button> -->
+      <nav class="top-nav" aria-label="주요 메뉴">
+        <a href="#projects">프로젝트 목록</a>
+        <a href="#about">자기소개</a>
+        <a href="#skills">기술스택</a>
+      </nav>
     </header>
 
     <section class="hero">
@@ -261,13 +35,17 @@
       <div class="skills">컴퓨터공학 전공 · Java/Spring Boot · React · Android · Cloud</div>
 
       <div class="actions">
-        <a class="btn primary" href="/projects/index.html" aria-label="프로젝트 보기">
+        <a class="btn primary" href="/index.html" aria-label="프로젝트 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4l2 2h8a2 2 0 0 1 2 2v1H2V6a2 2 0 0 1 2-2h6zm12 7H2l2.2 7.2A2.5 2.5 0 0 0 6.6 20h10.8a2.5 2.5 0 0 0 2.4-1.8L22 11z"/></svg>
           프로젝트 보기
         </a>
-        <a class="btn secondary" href="/pages/aboutme.html" aria-label="연락하기">
+        <a class="btn secondary" href="/aboutme.html" aria-label="연락하기">
           <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon contact-icon"  aria-hidden="true">  <path fill="currentColor" d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM380 696c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm304 272c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 3.6 8 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48z"/></svg>
           자기소개
+        </a>
+        <a class="btn secondary" href="/tech-stack.html" aria-label="연락하기">
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon contact-icon"  aria-hidden="true">  <path fill="currentColor" d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM380 696c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm304 272c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 3.6 8 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48z"/></svg>
+          기술스택
         </a>
       </div>
       
