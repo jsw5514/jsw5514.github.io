@@ -153,8 +153,8 @@ const projects = [
         subtitle: '디지털 타임캡슐 앱',
         summary: '물리적 타임캡슐의 훼손·분실 문제를 해결하는 디지털 서비스. 위치 기반 캡슐 시각화와 타인 전송, 오픈 알림 기능을 구현했습니다.',
         highlights: [
-            '#',
-            '#'
+            '데이터 구조와 연계된 UI 설계로 DB 접근 최적화',
+            'AWS를 이용한 배포'
         ],
         stacks: ['Kotlin', 'FastAPI', 'MySQL', '지도 API'],
         githubUrl: 'https://github.com/TUK-mobile-programming',
