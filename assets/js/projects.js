@@ -186,8 +186,8 @@ const projects = [
         subtitle: 'PC 최적화 사진 공유 게시판',
         summary: '인스타그램의 불편한 데스크탑 UI를 개선하는 PC 친화적 사진 공유 플랫폼. MVC 아키텍처 기반의 게시글 CRUD 및 파일 업로드/다운로드 기능을 제공합니다.',
         highlights: [
-            '#',
-            '#'
+            'JSP 기반으로 프레임워크를 사용하지 않은 웹페이지',
+            '세션 기반 인증'
         ],
         stacks: ['Java/JSP', 'MVC', 'MySQL', 'Maven'],
         githubUrl: 'https://github.com/jsw5514/picpic',
@@ -219,8 +219,8 @@ const projects = [
         subtitle: '안드로이드 미로 찾기 게임',
         summary: '안드로이드 2D 게임 프레임워크(a2dg)를 활용한 미로 게임. 재귀적 백트래킹 알고리즘으로 미로를 생성하고, 옵저버 패턴으로 씬 간 통신을 구현했습니다.',
         highlights: [
-            '#',
-            '#'
+            '안드로이드 뷰 계층 - 게임 씬 계층 - 게임 오브젝트 계층으로 분리된 계층 구조',
+            '하위계층에선 상위계층을 모르는 객체지향적 단방향 의존 구조'
         ],
         stacks: ['Java (Android)', 'SQLite', 'Tiled', 'Observer 패턴'],
         githubUrl: 'https://github.com/jsw5514/Escaper',
