@@ -60,7 +60,7 @@ const projects = [
             'Base64 이미지 인코딩으로 멀티파트 업로드 없이 REST API 처리',
             'Chart.js를 활용한 관리자 대시보드 구현'
         ],
-        stacks: ['Arduino/C++', 'Spring Boot', 'Kotlin', 'MySQL', 'BLE'],
+        stacks: ['Arduino', 'C++', 'Java', 'Spring Boot', 'Kotlin', 'MySQL', 'BLE'],
         githubUrl: 'https://github.com/jsw5514/PetHealthManager',
         icon: 'pet',
         detail: {
@@ -92,7 +92,7 @@ const projects = [
             '지연처리 도입으로 크롤링 재처리 시간 1~2h → 약 3초',
             '기획·설계·요구사항 분석·다이어그램 작성 주도'
         ],
-        stacks: ['React', 'Redux', 'Spring Boot', 'NCP', 'AI 모듈'],
+        stacks: ['React', 'Java', 'Spring Boot', 'NCP', 'Gemini'],
         githubUrl: 'https://github.com/tjoun-first/Backend',
         icon: 'news',
         detail: {
@@ -124,7 +124,7 @@ const projects = [
             '인증 모듈·채팅 모듈 개발 및 서버 배포 담당',
             '에러코드/로그 기반 커뮤니케이션으로 연동 문제 해결'
         ],
-        stacks: ['React Native', 'Spring Boot', 'WebSocket', 'NCP', 'Google Maps'],
+        stacks: ['React Native', 'Java', 'Spring Boot', 'WebSocket', 'NCP', 'Google Maps'],
         githubUrl: 'https://github.com/tjoeun-second/ActionMate-Backend',
         icon: 'people',
         detail: {
@@ -156,7 +156,7 @@ const projects = [
             '데이터 구조와 연계된 UI 설계로 DB 접근 최적화',
             'AWS를 이용한 배포'
         ],
-        stacks: ['Kotlin', 'FastAPI', 'MySQL', '지도 API'],
+        stacks: ['Kotlin', 'Python', 'FastAPI', 'MySQL', 'AWS', 'Google Maps'],
         githubUrl: 'https://github.com/TUK-mobile-programming',
         icon: 'capsule',
         detail: {
@@ -189,7 +189,7 @@ const projects = [
             'JSP 기반으로 프레임워크를 사용하지 않은 웹페이지',
             '세션 기반 인증'
         ],
-        stacks: ['Java/JSP', 'MVC', 'MySQL', 'Maven'],
+        stacks: ['Java', 'JSP', 'MVC', 'MySQL', 'Maven'],
         githubUrl: 'https://github.com/jsw5514/picpic',
         icon: 'gallery',
         detail: {
@@ -222,7 +222,7 @@ const projects = [
             '안드로이드 뷰 계층 - 게임 씬 계층 - 게임 오브젝트 계층으로 분리된 계층 구조',
             '하위계층에선 상위계층을 모르는 객체지향적 단방향 의존 구조'
         ],
-        stacks: ['Java (Android)', 'SQLite', 'Tiled', 'Observer 패턴'],
+        stacks: ['Java', 'Android', 'SQLite', 'Tiled', 'Observer 패턴'],
         githubUrl: 'https://github.com/jsw5514/Escaper',
         icon: 'game',
         detail: {
