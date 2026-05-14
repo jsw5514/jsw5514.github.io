@@ -223,8 +223,8 @@ const projects = [
         }
     },
     {
-        id: 'picpic',
-        name: 'Picpic',
+        id: 'pickpic',
+        name: 'Pick Pic',
         categories: ['풀스택', '웹', '백엔드'],
         hasDetail: false,
         period: '2024.11 ~ 2024.12',
@@ -237,7 +237,7 @@ const projects = [
             '세션 기반 인증'
         ],
         stacks: ['Java', 'JSP', 'MVC', 'MySQL', 'Maven'],
-        githubUrl: 'https://github.com/jsw5514/picpic',
+        githubUrl: 'https://github.com/jsw5514/Pick-Pic',
         icon: 'gallery',
         detail: {
             meta: '2024.11 ~ 2024.12 · # · 웹 풀스택',
